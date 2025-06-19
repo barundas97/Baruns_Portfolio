@@ -71,8 +71,8 @@ const Hero = () => {
 
           <div className="mt-6 flex flex-col md:flex-row items-center md:items-start md:justify-start gap-6">
             <a
-              href="/Barun_Das_frontend_Resume.pdf"
-              download={"Barun's_portfolio.pdf"}
+              href="/Frontend Resume.pdf"
+              download={"Frontend Resume.pdf"}
               className="px-6 py-3 
                           bg-gradient-to-r 
                         from-purple-600 

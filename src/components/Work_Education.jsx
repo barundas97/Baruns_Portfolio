@@ -11,7 +11,7 @@ const timelineData = [
     type: "organization",
     title: "🏢 Emmvee Photovoltaic Power Pvt.Ltd",
     institution: "EL Testing Operator",
-    year: "01 Sep,2019 – 30 Jan 2020",
+    year: "01 Sep,2019 - 30 Jan 2020",
     popup: {
       role:
         "Worked on Production EL Testing on Solar Panels to check foreign micro particles & damaged cells.",
@@ -21,7 +21,7 @@ const timelineData = [
     type: "organization",
     title: "🏢 Kaynes Technology India.Ltd",
     institution: "Quality Testing",
-    year: "01 Mar,2018 – 01 Aug 2019",
+    year: "01 Mar,2018 - 01 Aug 2019",
     popup: {
       role: "Production Quality Testing Operator",
     },
@@ -42,7 +42,7 @@ const timelineData = [
     type: "certification",
     title: "📜 Diploma in Office Automation & publishing (DOAP)",
     year: "2013 -2014",
-    link: "https://mycourse.com/html-certification",
+    link: "https://drive.google.com/file/d/1_u7aVvxnP0Lm4cSJt0_4GVV2kU3X30rK/view?usp=drive_link",
   },
   {
     type: "school",
