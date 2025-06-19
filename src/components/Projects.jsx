@@ -12,11 +12,11 @@ const allProjects = [
   },
   {
     id: 2,
-    title: "Todo App",
-    technology:"",
-    image: "/assets/project2.png",
-    repo: "https://github.com/yourname/todo-app",
-    demo: "https://todoapp.vercel.app",
+    title: "TaskiFy Web-App",
+    technology:"Css3, React js",
+    image: "https://res.cloudinary.com/dpywncjnh/image/upload/v1750322095/Untitled_ipbqqp.png",
+    repo: "https://github.com/barundas97/Taskify",
+    demo: "https://taskify-v.netlify.app/",
   },
   {
     id: 3,
