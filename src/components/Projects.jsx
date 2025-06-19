@@ -18,7 +18,7 @@ const allProjects = [
   },
   {
     id: 2,
-    title: "TO-DO Web-App",
+    title: "TaskiFy ToDo_App",
     technologies: [
       {
         name: "CSS3",
@@ -35,16 +35,24 @@ const allProjects = [
   },
   {
     id: 3,
-    title: "Weather App",
+    title: "Recipe Finder",
     technologies: [
       {
-        name: "React",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        name: "HTML",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      },
+      {
+        name: "CSS3",
+        logo:  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
+      {
+        name: "JavaScript",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       },
     ],
-    image: "/assets/project3.png",
-    repo: "https://github.com/yourname/weather-app",
-    demo: "https://weatherapp.vercel.app",
+    image: "https://res.cloudinary.com/dpywncjnh/image/upload/v1750343436/Barun_sArt_valakq.png",
+    repo: "https://github.com/barundas97/Recipe-App",
+    demo: "https://cook-find.netlify.app/",
   },
   {
     id: 4,
