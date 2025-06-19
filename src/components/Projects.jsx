@@ -1,19 +1,34 @@
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
+// Updated data: "technologies" is an array of { name, logo }
 const allProjects = [
   {
     id: 1,
     title: "e-Commerce WebDesign",
-    technology:"Bootstrap",
+    technologies: [
+      {
+        name: "Bootstrap",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      },
+    ],
     image: "https://res.cloudinary.com/dpywncjnh/image/upload/v1744825721/Landing_q17kad.png",
     repo: "https://github.com/barundas97/Jewellery_Store",
     demo: "https://trinayonii.netlify.app/",
   },
   {
     id: 2,
-    title: "TaskiFy Web-App",
-    technology:"Css3, React js",
+    title: "TO-DO Web-App",
+    technologies: [
+      {
+        name: "CSS3",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
+      {
+        name: "React",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+    ],
     image: "https://res.cloudinary.com/dpywncjnh/image/upload/v1750322095/Untitled_ipbqqp.png",
     repo: "https://github.com/barundas97/Taskify",
     demo: "https://taskify-v.netlify.app/",
@@ -21,7 +36,12 @@ const allProjects = [
   {
     id: 3,
     title: "Weather App",
-    technology:"",
+    technologies: [
+      {
+        name: "React",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+    ],
     image: "/assets/project3.png",
     repo: "https://github.com/yourname/weather-app",
     demo: "https://weatherapp.vercel.app",
@@ -29,7 +49,12 @@ const allProjects = [
   {
     id: 4,
     title: "Blog Website",
-    technology:"",
+    technologies: [
+      {
+        name: "React",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+    ],
     image: "/assets/project4.png",
     repo: "https://github.com/yourname/blog",
     demo: "https://blogsite.vercel.app",
@@ -37,7 +62,7 @@ const allProjects = [
   {
     id: 5,
     title: "E-commerce",
-    technology:"",
+    technologies: [],
     image: "/assets/project5.png",
     repo: "#",
     demo: "#",
@@ -45,7 +70,7 @@ const allProjects = [
   {
     id: 6,
     title: "Chat App",
-    technology:"",
+    technologies: [],
     image: "/assets/project6.png",
     repo: "#",
     demo: "#",
@@ -86,7 +111,7 @@ const Projects = () => {
               } bg-none`}
             >
               <div
-                className={`relative w-full h-64 overflow-hidden rounded-xl transform transition-transform duration-500 ${
+                className={`relative w-full h-64 overflow-hidden rounded-xl group transform transition-transform duration-500 ${
                   index % 2 === 0 ? "-rotate-3 hover:rotate-0 animate-glow" : "rotate-3 hover:rotate-0 animate-glow"
                 }`}
               >
@@ -95,24 +120,16 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover "
                 />
-                <div className="absolute 
-                                inset-0 
-                                bg-transparent 
-                                bg-opacity-20 
-                                backdrop-blur-sm 
-                                text-white 
-                                font-semibold 
-                                flex 
-                                items-center 
-                                justify-center 
-                                opacity-0 
-                                hover:opacity-100 
-                                transition-opacity 
-                                duration-300 text-lg">
-                  Title: {project.title}
-                  <br/>
-                  Technology: {project.technology}
-
+                <div className="absolute inset-0 bg-black/20 bg-opacity-40 backdrop-blur-sm text-white font-semibold flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg">
+                  <span className="mb-3 text-2xl">{project.title}</span>
+                  <div className="flex gap-4">
+                    {project.technologies && project.technologies.length > 0 && project.technologies.map((tech) => (
+                      <div key={tech.name} className="flex flex-col items-center">
+                        <img src={tech.logo} alt={tech.name} className="w-8 h-8" />
+                        <span className="text-base mt-1">{tech.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
